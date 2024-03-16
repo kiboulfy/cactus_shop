@@ -1,0 +1,179 @@
+@import 'module/zeroing.scss';
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html {
+  height: 300%;
+}
+
+body {
+  font-family: "Kanit", 'sans-serif';
+  font-weight: 400;
+  color: white;
+  background-color: #F4F7FA;
+}
+
+section, footer {
+  width: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.video-bg {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  &__content {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 2;
+    color: #ffffff;
+  }
+  & video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.header {
+  width: 100%;
+  background: transparent;
+  top: 0;
+  margin-bottom: 50px;
+  &__wrapper {
+    display: flex;
+  }
+  &-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    &__logo {
+      position: relative;
+      display: block;
+      &__image {
+        width: 200px;
+        height: 200px;
+        transition: .3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  &-list{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-size: 20px;
+    &__item {
+      transition: all .5s;
+      &:hover {
+        color: lightskyblue;
+        transform: scale(1.1);
+      }
+    }
+  }
+  &-btns {
+    display: flex;
+    flex-direction: column;
+    & button {
+      width: 100px;
+      height: 100px;
+      font-size: 15px;
+      border: 3px solid whitesmoke;
+      border-radius: 50%;
+      transition: all .5s;
+      &:hover {
+        color: lightskyblue;
+        border-color: lightskyblue;
+        transform: scale(1.1);
+      }
+    }
+    & img{
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.preview {
+  margin-left: 80px;
+}
+
+.content {
+  font-weight: 800;
+  font-size: 40px;
+  & span {
+    color: #02C0B7;
+  }
+  &__caption {
+    margin-bottom: 30px;
+  }
+  &__description {
+    font-size: 20px;
+  }
+}
+
+.schedule {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+  &__caption {
+    margin: 20px 0;
+    color: black;
+    font-weight: 800;
+    font-size: 36px;
+  }
+  &-list {
+    display: grid;
+    grid-template: repeat(3, 350px) / repeat(3, 280px);
+    column-gap: 120px;
+    &__item {
+      position: relative;
+      max-height: 211px;
+      transition: all .3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+      & img {
+        border: 2px solid black;
+        box-shadow: -15px 15px 0 0 #02C0B7;
+        filter: blur(0);
+        transition: all .3s ease-in-out;
+        &:hover {
+          filter: blur(2px);
+        }
+      }
+      & p {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        pointer-events: none;
+      }
+    }
+  }
+}

@@ -1,1 +1,126 @@
-<h1>ахуй)</h1>
+{% load static%}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kaktus</title>
+    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+</head>
+<body>
+<div class="video-bg">
+    <video src="{% static 'frontend/img/background_video.mp4' %}" autoplay muted loop></video>
+    <div class="video-bg__content">
+        <header class="header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-nav">
+                        <div class="header-nav__logo">
+                            <img class="header-nav__logo__image" src="{% static 'frontend/img/icons/logo.png' %}" alt="Логотип в виде кактуса">
+                        </div>
+                        <ul class="header-list">
+                            <li class="header-list__item">
+                                <a href="#home">Продукция</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="#home">Наша цель</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="#home">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="header-btns">
+                            <form action="personal_account.html" target="_self">
+                                <button><img src="{% static 'frontend/img/icons/login.png' %}" alt="">Войти</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="preview">
+            <div class="container">
+                <div class="preview__wrapper">
+                    <div class="content">
+                        <h1 class="content__caption" ><span>Лучшие <br> кактусы</span> для <br> вашего интерьера</h1>
+                        <p class="content__description">
+                            <span>У нас</span> собраны <span> лучшие, порой и единственные</span> пока экземпляры, <br> привезенные из Италии и Голландии. Вся коллекция обработана от
+                            <br> вредителей, многое заботливо пересажено и живет в теплицах или под <br> лампами. В продаже бывают также редкие каудексные растения, и, при
+                            <br> любой возможности, мы бываем на выставках, что тоже отлично <br> разнообразить обычный ассортимент.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<main>
+    <section class="schedule">
+        <div class="container">
+            <div class="schedule__wrapper">
+                <div class="schedule__caption">Наша продукция</div>
+                <ul class="schedule-list">
+                    <li class="schedule-list__item">
+                        <a class="effect-text" href="#cactus">
+                            <img src="{% static 'frontend/img/cactus.jpg' %}" alt="Кактус на фоне">
+                            <p>Кактусы</p>
+                        </a>
+                    </li>
+                    <li class="schedule-list__item">
+                        <a href="#sukkulent">
+                            <img src="{% static 'frontend/img/sukkulent.jpg' %}" alt="">
+                            <p>Суккуленты</p>
+                        </a>
+                    </li>
+                    <li class="schedule-list__item">
+                        <a href="#caudecs">
+                            <img src="{% static 'frontend/img/caudecs.jpg' %}" alt="">
+                            <p>Каудексные</p>
+                        </a>
+                    </li>
+                    <li class="schedule-list__item">
+                        <a href="#variegat">
+                            <img src="{% static 'frontend/img/variegat.jpg' %}" alt="">
+                            <p>Вариегантные</p>
+                        </a>
+                    </li>
+                    <li class="schedule-list__item">
+                        <a href="#cristat">
+                            <img src="{% static 'frontend/img/cristat.jpg' %}" alt="">
+                            <p>Кристатные</p>
+                        </a>
+                    </li>
+                    <li class="schedule-list__item">
+                        <a href="#monstr">
+                            <img src="{% static 'frontend/img/monstr.jpg'%}" alt="">
+                            <p>Монстрозные</p>
+                        </a>
+                    </li>
+                    <li class="schedule-list__item">
+                        <a href="#soils">
+                            <img src="{%static 'frontend/img/soils.jpg'%}" alt="">
+                            <p>Грунты и <br> удобрения</p>
+                        </a>
+                    </li>
+                    <li class="schedule-list__item">
+                        <a href="#accessories">
+                            <img src="{%static 'frontend/img/accessories.jpg' %}" alt="">
+                            <p>Горшки и <br> аксессуары</p>
+                        </a>
+                    </li>
+                    <li class="schedule-list__item">
+                        <a href="#gift">
+                            <img src="{% static 'frontend/img/gift.jpg' %}" alt="">
+                            <p>Идеи <br> подарков</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
