@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kaktus</title>
+    <link rel="stylesheet" href="{%static 'frontend/css/registration.css'%}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="header-nav">
+                    <form action="{% url 'index'%}" target="_self" class="header-nav__logo">
+                        <button><img class="header-nav__logo__image" src="{%static 'frontend/img/icons/logo.png'%}" alt="Логотип в виде кактуса"></button>
+                    </form>
+                    <ul class="header-list">
+                        <li class="header-list__item">
+                            <a href="#">Продукция</a>
+                        </li>
+                        <li class="header-list__item">
+                            <a href="#">Наша цель</a>
+                        </li>
+                        <li class="header-list__item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="header-btns">
+                        <form action="{% url 'login'%}" target="_self">
+                            <button><img src="{%static 'frontend/img/icons/login.png'%}" alt="">Войти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="registration">
+        <div class="container">
+            <div class="registration__wrapper">
+                <div class="registration-form">
+                    <div class="users-tools">
+                        {% csrf_token %}
+                        <h3 class="users-tools__caption">Регистрация</h3>
+                        <div class="users-tools__description">
+                            <div class="users-tools__input">
+                                <div class="users-tools__input-search-block">
+                                    <input class="users-tools__input-search" type="search" required>
+                                    <label class="users-tools__input-search-label"> Email </label>
+                                </div>
+                            </div>
+                            <div class="users-tools__input">
+                                <div class="users-tools__input-search-block">
+                                    <input class="users-tools__input-search" type="search" required>
+                                    <label class="users-tools__input-search-label"> Инициалы </label>
+                                </div>
+                            </div>
+                            <div class="users-tools__input">
+                                <div class="users-tools__input-search-block">
+                                    <input class="users-tools__input-search" type="search" required>
+                                    <label class="users-tools__input-search-label"> Пароль </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="users-tools__btn">Зарегистрироваться</button>
+                        <form action="{% url 'login'%}" target="_self" class="users-tools-option">
+                            Уже есть аккаунт?
+                            <button class="users-tools-option__btn">Войти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -33,9 +33,15 @@
                             </li>
                         </ul>
                         <div class="header-btns">
-                            <form action="personal_account.html" target="_self">
+                            {% if user.is_authenticated %}
+                            <form action = "{% url 'profile' %}">
+                            <p><button>{{ user.username }}</p></button>
+                            </form>
+                            {% else %}
+                            <form action="{% url 'login'%}" target="_self">
                                 <button><img src="{% static 'frontend/img/icons/login.png' %}" alt="">Войти</button>
                             </form>
+                            {%endif%}
                         </div>
                     </div>
                 </div>
