@@ -1,5 +1,9 @@
 @import 'module/zeroing.scss';
 
+body {
+  color: #000000;
+}
+
 .header {
   width: 100%;
   //background: rgba(0, 81, 195);
@@ -35,7 +39,7 @@
     flex-direction: row;
     gap: 50px;
     font-size: 20px;
-    color: #02C0B7;
+    color: $primary-color;
     &__item {
       transition: all .5s;
       &:hover {
@@ -47,11 +51,11 @@
     display: flex;
     flex-direction: column;
     & button {
-      color: #02C0B7;
+      color: $primary-color;
       width: 100px;
       height: 100px;
       font-size: 15px;
-      border: 3px solid #02C0B7;
+      border: 3px solid $primary-color;
       border-radius: 50%;
       transition: all .5s;
       &:hover {
@@ -73,9 +77,10 @@
   align-items: center;
   flex-direction: column;
   &-form {
-    border: 2px solid #02C0B7;
+    border: 2px solid $primary-color;
     border-radius: 45px;
     padding: 10px 20px;
+    background-color: #FFFFFF;
   }
 }
 
@@ -104,7 +109,7 @@
       border-radius: 0.5em;
       &:focus,
       &:valid {
-        border: 1px solid #02C0B7;
+        border: 1px solid $primary-color;
         transition: 0.5s;
       }
       &:focus ~ label,
@@ -131,7 +136,7 @@
   }
   &__btn {
     padding: 10px 20px;
-    border: 3px double #02C0B7;
+    border: 3px double $primary-color;
     border-radius: 45px;
     transition: .3s ease-in-out;
     &:hover {

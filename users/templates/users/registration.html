@@ -42,29 +42,42 @@
             <div class="registration__wrapper">
                 <div class="registration-form">
                     <div class="users-tools">
-                        {% csrf_token %}
                         <h3 class="users-tools__caption">Регистрация</h3>
-                        <div class="users-tools__description">
-                            <div class="users-tools__input">
-                                <div class="users-tools__input-search-block">
-                                    <input class="users-tools__input-search" type="search" required>
-                                    <label class="users-tools__input-search-label"> Email </label>
+                        <form action="{% url 'registration' %}" method="post">
+                            {% csrf_token %}
+                            <div class="users-tools__description">
+                                <div class="users-tools__input">
+                                    <div class="users-tools__input-search-block">
+                                        <input class="users-tools__input-search" type="email" id="id_email" name="email" value="{% if form.email.value %}{{ form.email.value }}{% endif %}" required>
+                                        <label for="id_email" class="users-tools__input-search-label"> Email </label>
+                                        
+                                    </div>
+                                </div>
+                                <div class="users-tools__input">
+                                    <div class="users-tools__input-search-block">
+                                        <input id="id_username" name="username" class="users-tools__input-search" type="search" value="{% if form.username.value %}{{ form.username.value }}{% endif %}" required>
+                                        <label for="id_username" class="users-tools__input-search-label"> Имя пользователя </label>
+                                        
+                                    </div>
+                                </div>
+                                <div class="users-tools__input">
+                                    <div class="users-tools__input-search-block">
+                                        <input class="users-tools__input-search" type="password" id="id_password1" name="password1" required>
+                                        <label for="id_password1" class="users-tools__input-search-label"> Пароль </label>
+                                        
+                                    </div>
+                                </div>
+                                <div class="users-tools__input">
+                                    <div class="users-tools__input-search-block">
+                                        <input class="users-tools__input-search" type="password" id="id_password2" name="password2" required>
+                                        <label for="id_password2" class="users-tools__input-search-label"> Подтвердите пароль </label>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                            <div class="users-tools__input">
-                                <div class="users-tools__input-search-block">
-                                    <input class="users-tools__input-search" type="search" required>
-                                    <label class="users-tools__input-search-label"> Инициалы </label>
-                                </div>
-                            </div>
-                            <div class="users-tools__input">
-                                <div class="users-tools__input-search-block">
-                                    <input class="users-tools__input-search" type="search" required>
-                                    <label class="users-tools__input-search-label"> Пароль </label>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <button class="users-tools__btn">Зарегистрироваться</button>
+                        </form>
                         <form action="{% url 'login'%}" target="_self" class="users-tools-option">
                             Уже есть аккаунт?
                             <button class="users-tools-option__btn">Войти</button>

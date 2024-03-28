@@ -1,4 +1,15 @@
 /* Reset and base styles  */
+
+$primary-color: #02C0B7;
+$secondary-color: lightskyblue;
+
+body {
+  font-family: "Kanit", 'sans-serif';
+  font-weight: 400;
+  color: white;
+  background-color: #F4F7FA;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -86,4 +97,10 @@ label {
 
 legend {
   display: block;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
 }

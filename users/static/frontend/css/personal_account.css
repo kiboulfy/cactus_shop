@@ -1,5 +1,5 @@
+@charset "UTF-8";
 /* Reset and base styles  */
-@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   font-family: "Kanit", "sans-serif";
   font-weight: 400;
@@ -97,44 +97,12 @@ legend {
   padding: 0 15px;
 }
 
-:root {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-section, footer {
-  width: 100%;
-}
-
-.video-bg {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  position: relative;
-}
-.video-bg__content {
-  width: 1300px;
-  margin: 0 auto;
-  padding: 0 15px;
-  z-index: 2;
-  color: #ffffff;
-}
-.video-bg video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-
 .header {
   width: 100%;
-  background: transparent;
-  top: 0;
-  margin-bottom: 50px;
+  border-bottom-right-radius: 45px;
+  border-bottom-left-radius: 45px;
+  color: #fff;
+  margin-bottom: 60px;
 }
 .header__wrapper {
   display: flex;
@@ -144,15 +112,17 @@ section, footer {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  height: 150px;
   font-weight: 800;
 }
 .header-nav__logo {
   position: relative;
   display: block;
+  cursor: pointer;
 }
 .header-nav__logo__image {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   transition: 0.3s ease-in-out;
 }
 .header-nav__logo__image:hover {
@@ -163,12 +133,12 @@ section, footer {
   flex-direction: row;
   gap: 50px;
   font-size: 20px;
+  color: #02C0B7;
 }
 .header-list__item {
   transition: all 0.5s;
 }
 .header-list__item:hover {
-  color: lightskyblue;
   transform: scale(1.1);
 }
 .header-btns {
@@ -176,16 +146,15 @@ section, footer {
   flex-direction: column;
 }
 .header-btns button {
+  color: #02C0B7;
   width: 100px;
   height: 100px;
   font-size: 15px;
-  border: 3px solid whitesmoke;
+  border: 3px solid #02C0B7;
   border-radius: 50%;
   transition: all 0.5s;
 }
 .header-btns button:hover {
-  color: lightskyblue;
-  border-color: lightskyblue;
   transform: scale(1.1);
 }
 .header-btns img {
@@ -193,67 +162,69 @@ section, footer {
   height: 60px;
 }
 
-.preview {
-  margin-left: 80px;
+.private {
+  width: 100%;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #000000;
 }
-
-.content {
-  font-weight: 800;
-  font-size: 40px;
+.private__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
-.content span {
-  color: #02C0B7;
+.private-list {
+  max-width: 300px;
 }
-.content__caption {
+.private-list__item {
   margin-bottom: 30px;
+  cursor: pointer;
+  transition: 0.7s ease-in-out;
 }
-.content__description {
+.private-list__item:hover:not(:first-of-type) {
+  transform: translateX(20%);
+}
+.private-list__item:first-of-type {
+  color: #02C0B7;
+  font-size: 36px;
+  margin-bottom: 40px;
+  cursor: default;
+}
+.private-list__item:last-of-type {
+  margin: 0;
+}
+.private-content {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.private__caption {
+  font-size: 36px;
+  color: #02C0B7;
+  margin-bottom: 40px;
+}
+.private-table {
+  display: grid;
+  grid-template: repeat(2, 150px)/repeat(3, 200px);
+  place-items: center center;
+  gap: 95px 65px;
+  grid-template-areas: "Текущие заказы   Личный счет      Личные данные" "История заказов  Профили заказов  Корзина";
+  color: #FFFFFF;
   font-size: 20px;
 }
-
-.schedule__wrapper {
+.private-table__item {
+  width: 200px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column nowrap;
+  background-color: #02C0B7;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 45px;
 }
-.schedule__caption {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  color: #02C0B7;
-  font-weight: 800;
-  font-size: 36px;
-}
-.schedule-list {
-  display: grid;
-  grid-template: repeat(3, 350px)/repeat(3, 280px);
-  column-gap: 120px;
-}
-.schedule-list__item {
-  position: relative;
-  max-height: 211px;
-  transition: all 0.3s ease-in-out;
-}
-.schedule-list__item:hover {
+.private-table__item:hover {
   transform: scale(1.1);
 }
-.schedule-list__item img {
-  border: 2px solid black;
-  box-shadow: -15px 15px 0 0 #02C0B7;
-  filter: blur(0);
-  transition: all 0.3s ease-in-out;
-}
-.schedule-list__item img:hover {
-  filter: blur(2px);
-}
-.schedule-list__item p {
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  font-family: "Kanit", sans-serif;
-  font-weight: 600;
-  font-size: 25px;
-  pointer-events: none;
-}
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=personal_account.css.map */

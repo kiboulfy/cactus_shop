@@ -31,6 +31,11 @@
                             <li class="header-list__item">
                                 <a href="#home">Контакты</a>
                             </li>
+                            {% if user.is_authenticated %}
+                            <li class="header-list__item">
+                                <a href="{% url 'logout' %}">Выйти</a>
+                            </li>
+                            {%endif%}
                         </ul>
                         <div class="header-btns">
                             {% if user.is_authenticated %}

@@ -1,1 +1,68 @@
-> Don't give up !)))
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kaktus</title>
+    <link rel="stylesheet" href="{% static 'frontend/css/personal_account.css' %}">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-nav">
+                <form action="{% url 'index'%}" target="_self" class="header-nav__logo">
+                    <button><img class="header-nav__logo__image" src="{% static 'frontend/img/icons/logo.png'%}" alt="Логотип в виде кактуса"></button>
+                </form>
+                <ul class="header-list">
+                    <li class="header-list__item">
+                        <a href="#">Продукция</a>
+                    </li>
+                    <li class="header-list__item">
+                        <a href="personal_account.html" >Личный кабинет</a>
+                    </li>
+                    <li class="header-list__item">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="private">
+        <div class="container">
+            <div class="private__wrapper">
+                <ul class="private-list">
+                    <li class="private-list__item">Мой аккаунт</li>
+                    <li class="private-list__item">Текущие заказы</li>
+                    <li class="private-list__item">Личный счет</li>
+                    <li class="private-list__item">Личные данные</li>
+                    <li class="private-list__item">История заказов</li>
+                    <li class="private-list__item">Корзина</li>
+                    <li class="private-list__item">Избранные товары</li>
+                    <li class="private-list__item">Текущие заказы</li>
+                </ul>
+                <div class="private-content">
+                    <h3 class="private__caption">
+                        Личный кабинет
+                    </h3>
+                    <div class="private-table">
+                        <div class="private-table__item">Текущие заказы</div>
+                        <div class="private-table__item">Личный счет</div>
+                        <div class="private-table__item">Личные данные</div>
+                        <div class="private-table__item">История заказов</div>
+                        <div class="private-table__item">Профили заказов</div>
+                        <div class="private-table__item">Корзина</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
