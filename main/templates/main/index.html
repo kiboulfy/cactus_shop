@@ -43,7 +43,7 @@
                             <p><button>{{ user.username }}</p></button>
                             </form>
                             {% else %}
-                            <form action="{% url 'login'%}" target="_self">
+                            <form action="{% url 'registration'%}" target="_self">
                                 <button><img src="{% static 'frontend/img/icons/login.png' %}" alt="">Войти</button>
                             </form>
                             {%endif%}

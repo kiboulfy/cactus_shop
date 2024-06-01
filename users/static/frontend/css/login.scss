@@ -97,6 +97,10 @@ body {
   &__caption {
     font-size: 40px;
   }
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
   &__description {
     display: flex;
     flex-direction: column;
@@ -116,7 +120,7 @@ body {
         border: 1px solid $primary-color;
         transition: 0.5s;
       }
-      &:focus ~ label,
+      &:focus ~ label,s
       &:valid ~ label {
         top: 0;
         font-size: 12px;
@@ -139,6 +143,9 @@ body {
     }
   }
   &__btn {
+    width: 100%;
+  }
+  &__button {
     padding: 10px 20px;
     border: 3px double $primary-color;
     border-radius: 45px;

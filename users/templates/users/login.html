@@ -44,7 +44,7 @@
             <div class="registration-form">
                 <div class="users-tools">
                     <h3 class="users-tools__caption">Войти</h3>
-                    <form action="{% url 'login' %}" method="post">
+                    <form class="users-tools__form" action="{% url 'login' %}" method="post">
                         {% csrf_token %}
                         
                         <div class="users-tools__description">
@@ -72,7 +72,9 @@
                                 </div>
                             </div>
                         </div> 
-                        <button class="users-tools__btn" type="submit">Войти</button>
+                        <div class="users-tools__btn">
+                            <button class="users-tools__button" type="submit">Войти</button>
+                        </div>
                     </form>
                 </div>
             </div>
